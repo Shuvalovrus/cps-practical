@@ -46,9 +46,10 @@ $screen-small: "(min-width: 1120px)";
 $screen-tablet: "(min-width: 768px)";
 
 // LAYOUT 
-$width-container: 1090px;
+$width-container: 1060px;
+$padding-container: 15px;
 
-
+// FONT CONNECTION
 @font-face {
     $font-name: "#{$font-family-custom}-Regular";
     font-family: $font-family-custom;
@@ -76,3 +77,185 @@ $width-container: 1090px;
         url("#{$font-path}/#{$font-name}.woff"),
         url("#{$font-path}/#{$font-name}.ttf"),
 }
+
+// ROOT
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.container {
+    width: 100%;
+    max-width: $width-container + $padding-container;
+  
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $padding-container;
+    padding-right: $padding-container;
+}
+// /ROOT
+// PAGE
+.page {
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 100vh;
+
+    margin: 0;
+
+    &__header{}
+    &__main{
+        flex-grow: 1;
+    }
+}
+// /PAGE
+// HEADER
+.header {
+    align-items: center;
+    display: flex;
+
+    height: 90px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__column {
+        display: flex;
+        flex-shrink: 1;
+        align-items: center;
+    }
+    &__menu {
+        margin-right: 15px;
+    }
+    &__logo {
+        position: relative;
+        margin-right: 15px;
+        @media screen and ($screen-tablet) {
+            padding-left: 15px;
+            &::before {
+                content: "";
+
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform:translateY(-50%);
+
+                display: block;
+
+                width: 2px;
+                height: 32px;
+
+                background-color: #EAEAEA;
+            }
+        }
+    }
+    &__contacts {
+        display: none;
+        margin-right: 15px;
+        @media screen and ($screen-tablet) {
+            display: block;
+        }
+    }
+    &__services {
+        display: flex;
+        position: relative;
+        padding-left: 20px;
+    }
+    &__services::before {
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform:translateY(-50%);
+
+        display: block;
+
+        width: 2px;
+        height: 32px;
+
+        background-color: #EAEAEA;
+    }
+}
+// /HEADER
+
+// BUTTON
+.button {
+    max-width: 180px;;
+    
+    margin: 0;
+    padding: 0;
+
+    border: none;
+      
+    cursor: pointer;
+    overflow: hidden;
+    &--type--rounded {
+        border-radius: 50%;
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }   
+        & >.button__icon {
+            display: flex;
+
+            width: 40px;
+            height: 40px;
+          
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+          
+            background-color: #FF3E79;
+            border-radius: 50%;
+        }
+    }
+    &--type--texted {
+        display: flex;
+
+        align-items: center;
+      
+        border-radius: 0;;
+        background-color: inherit;
+
+        line-height: $line-height-large;
+        font-weight: $font-weight-medium;
+
+        & > .button__text {
+            max-width: 150px;
+            
+            padding: 0;
+            margin: 0;
+            margin-right: 10px;
+    
+            overflow: hidden;
+    
+            text-wrap: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
+// /BUTTON
+
+// SERVICES 
+.services {
+    &__button {
+        &:nth-child(1) {
+            margin-right: 15px;
+        }
+    }
+}
+// / SERVICES
+
+// CONTACTS
+.contacts{
+    &__button:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+// /CONTACTS
