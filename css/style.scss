@@ -17,7 +17,12 @@ $background-color: $alabaster;
 // FONTS
 $font-size-base: 16px;
 
+$font-path: '/dist/fonts';
+
+$font-family-custom: 'TTLakes';
 $font-family-default: sans-serif;
+
+$font-family: $font-family-custom;
 
 $font-weight-regular: 400;
 $font-weight-medium: 500;
@@ -42,3 +47,32 @@ $screen-tablet: "(min-width: 768px)";
 
 // LAYOUT 
 $width-container: 1090px;
+
+
+@font-face {
+    $font-name: "#{$font-family-custom}-Regular";
+    font-family: $font-family-custom;
+    font-weight: $font-weight-regular;
+    font-style: normal;
+    src:
+        url("#{$font-path}/#{$font-name}.woff"),
+        url("#{$font-path}/#{$font-name}.ttf"),
+}
+@font-face {
+    $font-name: "#{$font-family-custom}-Medium";
+    font-family: $font-family-custom;
+    font-weight: $font-weight-medium;
+    font-style: normal;
+    src:
+        url("#{$font-path}/#{$font-name}.woff"),
+        url("#{$font-path}/#{$font-name}.ttf"),
+}
+@font-face {
+    $font-name: "#{$font-family-custom}-Bold";
+    font-family: $font-family-custom;
+    font-weight: $font-weight-bold;
+    font-style: normal;
+    src:
+        url("#{$font-path}/#{$font-name}.woff"),
+        url("#{$font-path}/#{$font-name}.ttf"),
+}
