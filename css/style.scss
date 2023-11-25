@@ -1,0 +1,44 @@
+// VARIABLES
+
+// COLORS 
+$whie: #ffffff;
+$black: #000000;
+
+$radical-red: #ff3e79;
+$shark: #1b1c21;
+$bright-turquoise: #41f6d7;
+$aero-blue: #b8ffec;
+$jumbo:#7e7e82;
+$alabaster: #f8f8f8;
+
+$color-text: $jumbo;
+$background-color: $alabaster;
+
+// FONTS
+$font-size-base: 16px;
+
+$font-family-default: sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$font-size-large: 28px;
+$font-size-small: 16px;
+$font-size-tiny: 14px;
+$font-size-miniature: 12px;
+
+$line-height-huge: 40px;
+$line-height-big: 32px;
+$line-height-large: 24px;
+$line-height-medium: 20px;
+$line-height-small: 18px;
+$line-height-tiny: 16px;
+
+// BREAKPOINTS
+$screen-desktop: "(min-width: 1440px)";
+$screen-small: "(min-width: 1120px)";
+$screen-tablet: "(min-width: 768px)";
+
+// LAYOUT 
+$width-container: 1090px;
