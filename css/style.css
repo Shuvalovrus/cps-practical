@@ -2,19 +2,19 @@
   font-family: "TTLakes";
   font-weight: 400;
   font-style: normal;
-  src: url("./fonts/TTLakes-Regular.woff"), url("./fonts/TTLakes-Regular.ttf");
+  src: url("../fonts/TTLakes-Regular.woff"), url("../fonts/TTLakes-Regular.ttf");
 }
 @font-face {
   font-family: "TTLakes";
   font-weight: 500;
   font-style: normal;
-  src: url("./fonts/TTLakes-Medium.woff"), url("./fonts/TTLakes-Medium.ttf");
+  src: url("../fonts/TTLakes-Medium.woff"), url("../fonts/TTLakes-Medium.ttf");
 }
 @font-face {
   font-family: "TTLakes";
   font-weight: 700;
   font-style: normal;
-  src: url("./fonts/TTLakes-Bold.woff"), url("./fonts/TTLakes-Bold.ttf");
+  src: url("../fonts/TTLakes-Bold.woff"), url("../fonts/TTLakes-Bold.ttf");
 }
 html {
   box-sizing: border-box;
@@ -188,7 +188,7 @@ html {
   width: 10px;
   height: 10px;
   margin-right: 10px;
-  background: url("./images/icons/arrow-down-icon.svg") no-repeat;
+  background: url("../images/icons/arrow-down-icon.svg") no-repeat;
 }
 .button--type--more:hover::before {
   transform: translateY(-1px);
