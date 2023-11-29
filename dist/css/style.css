@@ -188,7 +188,7 @@ html {
   width: 10px;
   height: 10px;
   margin-right: 10px;
-  background: url("/dist/images/icons/arrow-down-icon.svg") no-repeat;
+  background: url("/images/icons/arrow-down-icon.svg") no-repeat;
 }
 .button--type--more:hover::before {
   transform: translateY(-1px);
