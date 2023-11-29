@@ -17,7 +17,7 @@ $background-color: $alabaster;
 // FONTS
 $font-size-base: 16px;
 
-$font-path: './fonts';
+$font-path: '../fonts';
 
 $font-family-custom: 'TTLakes';
 $font-family-default: sans-serif;
@@ -282,7 +282,7 @@ html {
             width: 10px;
             height: 10px;
             margin-right: 10px;
-            background: url('./images/icons/arrow-down-icon.svg') no-repeat;
+            background: url('../images/icons/arrow-down-icon.svg') no-repeat;
         }
         &:hover {
             &::before {
