@@ -157,6 +157,7 @@ html {
   box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
 }
 .button--type--texted {
+  -webkit-appearance: none;
   display: flex;
   align-items: center;
   border-radius: 0;
@@ -164,6 +165,7 @@ html {
   line-height: 24px;
   font-weight: 500;
   font-size: 16px;
+  color: #1b1c21;
 }
 .button--type--texted:hover > .button__icon {
   transform: rotate(8deg);
@@ -252,7 +254,7 @@ html {
 .tabs {
   padding-top: 10px;
   padding-bottom: 10px;
-  overflow: hidden;
+  overflow: scroll;
 }
 .tabs__list {
   display: flex;
@@ -287,6 +289,12 @@ html {
   padding: 5px 20px;
   background-color: #ffffff;
   border: 2px solid #b8ffec;
+}
+@media screen and ((min-width: 1120px)) {
+  .tabs {
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
 }
 @media screen and ((min-width: 1440px)) {
   .tabs {
