@@ -35,109 +35,12 @@ html {
   padding-right: 15px;
 }
 
-.page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-}
-.page__main {
-  flex-grow: 1;
-}
-
-.header {
-  align-items: center;
-  display: flex;
-  height: 90px;
-}
-.header__container {
-  display: flex;
-  justify-content: space-between;
-}
-.header__column {
-  display: flex;
-  flex-shrink: 1;
-  align-items: center;
-}
-.header__menu {
-  margin-right: 15px;
-}
-.header__logo {
-  position: relative;
-  margin-right: 15px;
-}
-@media screen and ((min-width: 768px)) {
-  .header__logo {
-    padding-left: 15px;
-  }
-  .header__logo::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    display: block;
-    width: 2px;
-    height: 32px;
-    background-color: #EAEAEA;
-  }
-}
-@media screen and ((max-width: 290px)) {
-  .header__logo {
-    display: none;
-  }
-}
-.header__contacts {
-  display: none;
-  margin-right: 15px;
-}
-@media screen and ((min-width: 768px)) {
-  .header__contacts {
-    display: block;
-  }
-}
-.header__services {
-  display: flex;
-  position: relative;
-  padding-left: 20px;
-}
-@media screen and ((max-width: 290px)) {
-  .header__services {
-    display: none;
-  }
-}
-.header__services::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  display: block;
-  width: 2px;
-  height: 32px;
-  background-color: #EAEAEA;
-}
-@media screen and ((min-width: 1120px)) {
-  .header {
-    display: none;
-  }
-}
-
-.title {
-  position: relative;
-  margin: 0;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 40px;
-}
-
 .button {
   max-width: 180px;
   margin: 0;
   padding: 0;
   border: none;
   cursor: pointer;
-  overflow: hidden;
 }
 .button > .button__icon {
   display: flex;
@@ -194,6 +97,110 @@ html {
   transform: translateY(-1px);
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+.page__main {
+  flex-grow: 1;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+.header__column {
+  display: flex;
+  flex-shrink: 1;
+  align-items: center;
+}
+.header__menu {
+  position: relative;
+  margin-right: 15px;
+}
+@media screen and ((min-width: 768px)) {
+  .header__menu {
+    margin-right: 40px;
+  }
+  .header__menu::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    display: block;
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+  }
+}
+.header__logo {
+  position: relative;
+  margin-right: 15px;
+}
+@media screen and ((max-width: 290px)) {
+  .header__logo {
+    display: none;
+  }
+}
+.header__contacts {
+  display: none;
+  margin-right: 15px;
+}
+@media screen and ((min-width: 768px)) {
+  .header__contacts {
+    display: block;
+  }
+}
+.header__services {
+  display: flex;
+  position: relative;
+  padding-left: 20px;
+}
+@media screen and ((max-width: 290px)) {
+  .header__services {
+    display: none;
+  }
+}
+.header__services::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 2px;
+  height: 32px;
+  background-color: #EAEAEA;
+}
+@media screen and ((max-width: 290px)) {
+  .header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+@media screen and ((min-width: 1120px)) {
+  .header {
+    display: none;
+  }
+}
+
+.title {
+  position: relative;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
 .services__button:nth-child(1) {
   margin-right: 15px;
 }
@@ -248,18 +255,19 @@ html {
   }
 }
 .main__tabs {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .tabs {
-  padding-top: 10px;
-  padding-bottom: 10px;
   overflow: scroll;
 }
 .tabs__list {
   display: flex;
   margin: 0;
-  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
   list-style: none;
 }
 @media screen and ((min-width: 1120px)) {
@@ -307,10 +315,14 @@ html {
   display: flex;
   flex-direction: column;
 }
+.about__button {
+  margin-top: 15px;
+}
 .about__paragraph {
   color: #1b1c21;
   font-size: 16px;
   line-height: 18px;
+  white-space: pre-wrap;
 }
 @media screen and ((min-width: 768px)) {
   .about__paragraph {

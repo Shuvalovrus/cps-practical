@@ -100,111 +100,6 @@ html {
     padding-right: $padding-container;
 }
 // /ROOT
-// PAGE
-.page {
-    display: flex;
-    flex-direction: column;
-    
-    min-height: 100vh;
-
-    margin: 0;
-
-    &__main{
-        flex-grow: 1;
-    }
-}
-// /PAGE
-// HEADER
-.header {
-    align-items: center;
-    display: flex;
-
-    height: 90px;
-
-    &__container {
-        display: flex;
-        justify-content: space-between;
-    }
-    &__column {
-        display: flex;
-        flex-shrink: 1;
-        align-items: center;
-    }
-    &__menu {
-        margin-right: 15px;
-    }
-    &__logo {
-        position: relative;
-        margin-right: 15px;
-        @media screen and ($screen-tablet) {
-            padding-left: 15px;
-            &::before {
-                content: "";
-
-                position: absolute;
-                top: 50%;
-                left: 0;
-                transform:translateY(-50%);
-
-                display: block;
-
-                width: 2px;
-                height: 32px;
-
-                background-color: #EAEAEA;
-            }
-        }
-        @media screen and ($screen-phone) {
-            display: none;
-        }
-
-    }
-    &__contacts {
-        display: none;
-        margin-right: 15px;
-        @media screen and ($screen-tablet) {
-            display: block;
-        }
-    }
-    &__services {
-        display: flex;
-        position: relative;
-        padding-left: 20px;
-        @media screen and ($screen-phone) {
-            display: none;
-        }
-    }
-    &__services::before {
-        content: "";
-
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform:translateY(-50%);
-
-        display: block;
-
-        width: 2px;
-        height: 32px;
-
-        background-color: #EAEAEA;
-    }
-    @media screen and ($screen-desktop-small) {
-        display: none;
-    }
-}
-// /HEADER
-
-// TITLE
-.title {
-    position: relative;
-    margin: 0;
-
-    font-size: $font-size-large;
-    font-weight: $font-weight-bold;
-    line-height: $line-height-huge;
-}
-// TITLE
 
 // BUTTON
 .button {
@@ -216,7 +111,6 @@ html {
     border: none;
       
     cursor: pointer;
-    overflow: hidden;
 
     & >.button__icon {
         display: flex;
@@ -293,6 +187,116 @@ html {
 }
 // /BUTTON
 
+// PAGE
+.page {
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 100vh;
+
+    margin: 0;
+
+    &__main{
+        flex-grow: 1;
+    }
+}
+// /PAGE
+// HEADER
+.header {
+    align-items: center;
+    display: flex;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__column {
+        display: flex;
+        flex-shrink: 1;
+        align-items: center;
+    }
+    &__menu {
+        position: relative;
+        margin-right: 15px;
+        @media screen and ($screen-tablet) {
+            margin-right: 40px;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: -20px;
+                transform:translateY(-50%);
+
+                display: block;
+
+                width: 2px;
+                height: 32px;
+
+                background-color: #EAEAEA;
+            }
+    }
+    }
+    &__logo {
+        position: relative;
+        margin-right: 15px;
+
+        @media screen and ($screen-phone) {
+            display: none;
+        }
+    }
+    &__contacts {
+        display: none;
+        margin-right: 15px;
+        @media screen and ($screen-tablet) {
+            display: block;
+        }
+    }
+    &__services {
+        display: flex;
+        position: relative;
+        padding-left: 20px;
+        @media screen and ($screen-phone) {
+            display: none;
+        }
+    }
+    &__services::before {
+        content: "";
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform:translateY(-50%);
+
+        display: block;
+
+        width: 2px;
+        height: 32px;
+
+        background-color: #EAEAEA;
+    }
+    @media screen and ($screen-phone) {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    @media screen and ($screen-desktop-small) {
+        display: none;
+    }
+}
+// /HEADER
+
+// TITLE
+.title {
+    position: relative;
+    margin: 0;
+
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-huge;
+}
+// TITLE
+
 // SERVICES 
 .services {
     &__button {
@@ -360,22 +364,22 @@ html {
         }
     }
     &__tabs {
-        margin-bottom: 5px;
+        margin-bottom: 15px;
     }
 }
 // MAIN
 
 // TABS
 .tabs {
-    padding-top: 10px;
-    padding-bottom: 10px;
-
     overflow: scroll;
     &__list {
         display: flex;
 
         margin: 0;
-        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 0;
+        padding-right: 0;
         
         list-style: none;
         @media screen and ($screen-desktop-small) {
@@ -426,10 +430,16 @@ html {
 .about {
     display: flex;
     flex-direction: column;
+    &__button {
+        margin-top: 15px;
+    }
     &__paragraph {
         color: $shark;
+        
         font-size: $font-size-small;
         line-height: $line-height-small;
+        white-space: pre-wrap;
+
         @media screen and ($screen-tablet) {
             line-height: $line-height-medium;
         }
