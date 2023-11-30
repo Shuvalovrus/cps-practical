@@ -10,18 +10,14 @@
         <header class="page__header header">
             <div class="header__container container">
                 <div class="header__column">
-                    <div class="header__menu menu">
-                        <button class="button button--type--rounded">
-                            <span class="button__icon">
-                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H17C17.5523 0 18 0.447715 18 1C18 1.55228 17.5523 2 17 2H1C0.447716 2 0 1.55228 0 1ZM0 8C0 7.44772 0.447715 7 1 7H9C9.55228 7 10 7.44772 10 8C10 8.55229 9.55229 9 9 9H1C0.447715 9 0 8.55229 0 8ZM1 14C0.447715 14 0 14.4477 0 15C0 15.5523 0.447716 16 1 16H13C13.5523 16 14 15.5523 14 15C14 14.4477 13.5523 14 13 14H1Z" fill="white"/>
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="header__logo logo">
-                        <img src="./images/logo.svg" alt="SCP Company">
-                    </div>
+                    <button class="header__menu button button--type--rounded">
+                        <span class="button__icon">
+                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H17C17.5523 0 18 0.447715 18 1C18 1.55228 17.5523 2 17 2H1C0.447716 2 0 1.55228 0 1ZM0 8C0 7.44772 0.447715 7 1 7H9C9.55228 7 10 7.44772 10 8C10 8.55229 9.55229 9 9 9H1C0.447715 9 0 8.55229 0 8ZM1 14C0.447715 14 0 14.4477 0 15C0 15.5523 0.447716 16 1 16H13C13.5523 16 14 15.5523 14 15C14 14.4477 13.5523 14 13 14H1Z" fill="white"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <img class="header__logo logo" src="./images/logo.svg" alt="SCP Company">
                 </div>
                 <div class="header__column">
                     <div class="header__contacts contacts">
@@ -115,21 +111,18 @@
                     </ul>
                 </nav>
                 <section class="main__about about">
-                    <div class="about__column">
-                        <p class="about__paragraph">
-                            Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
-                            Только у нас вы можете отремонтировать свой ноутбук 
-                            Dell с официальной гарантией производителя.</p>
-                        <p class="about__paragraph">
-                            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
-                        </p>
-                        <button class="button button--type--more button--type--texted">
-                            <span class="button__text">Читать далее</span>
-                        </button>
-                    </div>
-                    <div class="about__column">
-                        <img class="about__image" src="./images/about-company.jpg" alt="Company logo and office hours">
-                    </div>
+                        <p class="about__paragraph about__column">
+Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
+Только у нас вы можете отремонтировать свой ноутбук 
+Dell с официальной гарантией производителя. 
+
+Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
+<button class="about__button button button--type--more button--type--texted">
+    <span class="button__text">Читать далее</span>
+</button>
+</p>
+
+                    <img  class="about__image about__column" src="./images/about-company.jpg" alt="Company logo and office hours">
                 </section>
             </div>
         </main>
