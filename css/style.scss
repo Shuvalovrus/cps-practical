@@ -29,6 +29,7 @@ $font-weight-medium: 500;
 $font-weight-bold: 700;
 
 $font-size-large: 28px;
+$font-size-big: 24px;
 $font-size-small: 16px;
 $font-size-tiny: 14px;
 $font-size-miniature: 12px;
@@ -99,12 +100,21 @@ html {
     padding-left: $padding-container;
     padding-right: $padding-container;
 }
+ul {
+    list-style: none;
+
+    padding: 0;
+}
+
+a {
+    color: $shark;
+
+    text-decoration: none;
+}
 // /ROOT
 
 // BUTTON
 .button {
-    max-width: 180px;;
-    
     margin: 0;
     padding: 0;
 
@@ -183,6 +193,33 @@ html {
                 transform: translateY(-1px)
             }
         }
+    }
+    &--type--mail {
+
+        color: $shark;
+
+        line-height: $line-height-large;
+    }
+    &--type--phone {
+        font-weight: $font-weight-bold;
+        font-size: $font-size-big;
+        line-height: $line-height-big;
+    }
+    &--type--phone:hover,
+    &--type--mail:hover {
+        opacity: .7;
+    }
+
+    &--type--lang {
+
+        color: $shark;
+        background-color: transparent;
+
+        line-height: $line-height-large;
+    }
+
+    &--active {
+        color: $jumbo;
     }
 }
 // /BUTTON
@@ -381,7 +418,6 @@ html {
         padding-left: 0;
         padding-right: 0;
         
-        list-style: none;
         @media screen and ($screen-desktop-small) {
             flex-wrap: wrap;           
         }
@@ -394,7 +430,6 @@ html {
     &__link {
         text-wrap: nowrap;
         white-space: nowrap;
-        text-decoration: none;
         color: $jumbo;
       
         padding: 5px 20px 0 5px;
@@ -482,3 +517,89 @@ html {
     }
 }
 // /ABOUT
+
+// SIDE-MENU
+.side-menu {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 320px;
+    height: 100%;
+    
+    padding-left: 25px;
+    padding-right: 25px;
+
+    box-shadow: 16px 0 52px 0 rgba($color: #0E185033, $alpha: 0.2),
+                -2px 4px 0 0 rgba($color: #454F7E05, $alpha: 0.02);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__menu-button {
+        margin-right: 15px;
+    }
+    &__contacts {
+        margin-bottom: 15px;
+    }
+    &__controls {
+        display: flex;
+        flex-direction: column;
+    }
+    &__mail {
+        margin-bottom: 10px;
+    }
+    &__phone {
+        margin-bottom: 40px;
+    }
+    &__lang-controls {
+        margin-bottom: 30px;
+    }
+}
+
+// /SIDE-MENU
+
+.navigation {
+    &__item{
+        &:not(:last-child)  {
+            margin-bottom: 30px;
+        }
+    }
+    &__link{
+        display: inline-block;
+
+        position: relative;
+
+        color: $shark;
+
+        line-height: $line-height-big;
+        &:hover {
+            color: $jumbo;
+        }
+        &--active {
+            color: $jumbo;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: -25px;
+
+                content: "";
+
+                width: 4px;
+                height: 100%;
+
+                background-color: $bright-turquoise;
+
+                border-top-right-radius:30%;
+                border-bottom-right-radius:30%;
+            }
+        }
+    }
+}
