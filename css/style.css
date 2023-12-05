@@ -35,8 +35,17 @@ html {
   padding-right: 15px;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: #1b1c21;
+  text-decoration: none;
+}
+
 .button {
-  max-width: 180px;
   margin: 0;
   padding: 0;
   border: none;
@@ -95,6 +104,26 @@ html {
 }
 .button--type--more:hover::before {
   transform: translateY(-1px);
+}
+.button--type--mail {
+  color: #1b1c21;
+  line-height: 24px;
+}
+.button--type--phone {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+.button--type--phone:hover, .button--type--mail:hover {
+  opacity: 0.7;
+}
+.button--type--lang {
+  color: #1b1c21;
+  background-color: transparent;
+  line-height: 24px;
+}
+.button--active {
+  color: #7e7e82;
 }
 
 .page {
@@ -268,7 +297,6 @@ html {
   padding-bottom: 10px;
   padding-left: 0;
   padding-right: 0;
-  list-style: none;
 }
 @media screen and ((min-width: 1120px)) {
   .tabs__list {
@@ -283,7 +311,6 @@ html {
 .tabs__link {
   text-wrap: nowrap;
   white-space: nowrap;
-  text-decoration: none;
   color: #7e7e82;
   padding: 5px 20px 0 5px;
   line-height: 24px;
@@ -368,6 +395,70 @@ html {
     flex-direction: row;
     justify-content: space-between;
   }
+}
+
+.side-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  height: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2), -2px 4px 0 0 rgba(69, 79, 126, 0.02);
+}
+.side-menu__header {
+  display: flex;
+  justify-content: space-between;
+}
+.side-menu__menu-button {
+  margin-right: 15px;
+}
+.side-menu__contacts {
+  margin-bottom: 15px;
+}
+.side-menu__controls {
+  display: flex;
+  flex-direction: column;
+}
+.side-menu__mail {
+  margin-bottom: 10px;
+}
+.side-menu__phone {
+  margin-bottom: 40px;
+}
+.side-menu__lang-controls {
+  margin-bottom: 30px;
+}
+
+.navigation__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.navigation__link {
+  display: inline-block;
+  position: relative;
+  color: #1b1c21;
+  line-height: 32px;
+}
+.navigation__link:hover {
+  color: #7e7e82;
+}
+.navigation__link--active {
+  color: #7e7e82;
+}
+.navigation__link--active::before {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: #41f6d7;
+  border-top-right-radius: 30%;
+  border-bottom-right-radius: 30%;
 }
 
 /*# sourceMappingURL=style.css.map */
