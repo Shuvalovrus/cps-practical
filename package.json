@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Verifiable task \"Block layout. Grid construction + BEM naming\"",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "watch": "sass --watch css/style.scss:dist/css/style.css",
     "build": "sass css/style.scss dist/css/style.css",
@@ -17,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/Shuvalovrus/cps-practical/issues"
   },
-  "homepage": "https://github.com/Shuvalovrus/cps-practical#readme"
+  "homepage": "https://github.com/Shuvalovrus/cps-practical#readme",
+  "dependencies": {}
 }

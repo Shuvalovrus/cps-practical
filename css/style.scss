@@ -10,6 +10,8 @@ $bright-turquoise: #41f6d7;
 $aero-blue: #b8ffec;
 $jumbo:#7e7e82;
 $alabaster: #f8f8f8;
+$gallery:#EAEAEA;
+$bombay: #B5B6BC;
 
 $color-text: $jumbo;
 $background-color: $alabaster;
@@ -30,6 +32,7 @@ $font-weight-bold: 700;
 
 $font-size-large: 28px;
 $font-size-big: 24px;
+$font-size-medium: 18px;
 $font-size-small: 16px;
 $font-size-tiny: 14px;
 $font-size-miniature: 12px;
@@ -48,7 +51,7 @@ $screen-tablet: "(min-width: 768px)";
 $screen-phone: "(max-width: 290px)";
 
 // LAYOUT 
-$width-container: 1060px;
+$width-container: 1070px;
 $padding-container: 15px;
 
 // FONT CONNECTION
@@ -99,6 +102,18 @@ html {
     margin-right: auto;
     padding-left: $padding-container;
     padding-right: $padding-container;
+}
+.section-title {
+    color: $color-text;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-large;
+}
+
+.hidden {
+    position: absolute;
+    top: -100%;
+    opacity: 0;
 }
 ul {
     list-style: none;
@@ -190,7 +205,7 @@ a {
         }
         &:hover {
             &::before {
-                transform: translateY(-1px)
+                transform: translateY(1px)
             }
         }
     }
@@ -325,7 +340,6 @@ a {
 
 // TITLE
 .title {
-    position: relative;
     margin: 0;
 
     font-size: $font-size-large;
@@ -336,6 +350,9 @@ a {
 
 // SERVICES 
 .services {
+    right: 15px;
+    top:0;
+
     &__button {
         &:nth-child(1) {
             margin-right: 15px;
@@ -356,48 +373,31 @@ a {
 .main {
     padding-top: 25px;
     background-color: $alabaster;
-
-    &::before {
-        width: 4px;
-        height: 40px;
-        
-        position: absolute;
-        left: 0;
-      
-        display: inline-block;
-      
-        content: "";
-      
-        background-color: $bright-turquoise;
-      
-        border-top-right-radius:30%;
-        border-bottom-right-radius:30%;
-        @media screen and ($screen-desktop) {
-              display: none;
-        }
-    }
-    &__container {
-        position: relative;;
-    }
-    &__services {
-        display: none;
-
-        position: absolute;
-        right: 15px;
-        top:0;
-        @media screen and ($screen-desktop-small) {
-            display: flex;
-            & .services__button {
-                &:nth-child(1) {
-                    margin-right: 30px;
-                }
-            }
-        }
-    }
+    
     &__title {
         margin-bottom: 30px;
+
         @media screen and ($screen-desktop-small) {
             margin-bottom: 20px;
+        }
+        &::before {
+            width: 4px;
+            height: 40px;
+            
+            position: absolute;
+            left: 0 !important;
+          
+            display: inline-block;
+          
+            content: "";
+          
+            background-color: $bright-turquoise;
+          
+            border-top-right-radius:30%;
+            border-bottom-right-radius:30%;
+            @media screen and ($screen-desktop) {
+                  display: none;
+            }
         }
     }
     &__tabs {
@@ -465,9 +465,35 @@ a {
 .about {
     display: flex;
     flex-direction: column;
+
+    &__services {
+        display: none;
+
+        @media screen and ($screen-desktop-small) {
+            display: flex;
+        }
+    }
+    &__header {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+    }
     &__button {
         margin-top: 15px;
+        &:nth-child(1) {
+            margin-right: 30px;
+        }
     }
+    &__content {
+        @media screen and ($screen-tablet) {
+            display: flex;
+            flex-direction:row;
+        
+            justify-content: space-between;
+        }
+    }
+
     &__paragraph {
         color: $shark;
         
@@ -508,12 +534,6 @@ a {
     &__column:nth-child(2) {
         flex: 0 1 50%;
         margin-bottom: 15px;
-    }
-    @media screen and ($screen-tablet) {
-        display: flex;
-        flex-direction:row;
-    
-        justify-content: space-between;
     }
 }
 // /ABOUT
@@ -566,6 +586,7 @@ a {
 
 // /SIDE-MENU
 
+// NAVIGATION
 .navigation {
     &__item{
         &:not(:last-child)  {
@@ -603,3 +624,128 @@ a {
         }
     }
 }
+// /NAVIGATION
+
+// BRANDS
+.brands {
+    &__title {
+        padding: 15px 0;
+        margin-bottom: 15px;
+
+        background-color: $white;
+    }
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 20px;
+
+    background-color: $white;
+    border: 1px solid $gallery;
+    border-radius: 5px;
+
+    max-height: 72px;
+    @media screen and ($screen-tablet) {
+        width: 100%;
+    }
+
+    &__button {
+        width: 40px;
+        height: 40px;
+
+        border: 2px solid $radical-red;
+
+        background-color: $white;
+        & > .button__icon {
+            width: auto;
+            height: auto;
+
+            background-color: $white;
+        }
+    }
+
+    &__image {
+        flex: 0 0 auto;
+    }
+}
+// /BRANDS 
+// SWIPER
+.swiper {
+    height: 115px;
+
+    &-button {
+        display: none;
+    }
+    &::after {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: block;
+        width: 20px;
+        height: 76px;
+
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255, 1));
+        opacity: 0.6;
+        z-index: 10;
+    }
+    &-pagination-bullet {
+        --swiper-pagination-bullet-size: 12px;
+        --swiper-pagination-color: #B5B6BC;
+        --swiper-pagination-bullet-inactive-color: #DDDDDD;
+        --swiper-pagination-bullet-inactive-opacity: 1;
+    }
+
+    &-pagination-bullet-active {
+        color: #fff;
+        background: #007aff;
+    }
+
+    &-slide {
+        box-sizing: border-box;
+        max-height: 72px;
+    }
+    @media screen and ($screen-tablet) {
+        height: auto;
+
+        &-wrapper {
+            --gap: 30px;
+            --elements: 3;
+
+            display: flex;
+
+            flex-wrap: wrap;          
+
+            gap: var(--gap);
+
+            margin-bottom: 25px;
+        }
+        &-slide {
+            width: calc((100% - (var(--elements) - 1) * var(--gap)) / (var(--elements)));
+        }
+        &-button {
+            display: inline-block;
+            &--active {
+                &::before {
+                    transform: rotate(180deg);
+                }
+                &:hover {
+                    &::before {
+                        transform:translateY(-1px) rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+    @media screen and ($screen-desktop) {
+        &-wrapper {
+            --elements: 4;
+        }
+    }
+}
+// /SWIPER
