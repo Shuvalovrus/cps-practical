@@ -40,8 +40,6 @@ html {
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
-
-  background: linear-gradient(to right, $alabaster 20%, $white 35%);
 }
 
 .hidden {
@@ -481,7 +479,8 @@ a {
 .brands__title {
   padding: 15px 0;
   margin-bottom: 15px;
-  background-color: #ffffff;
+  
+  background: linear-gradient(to right, #f8f8f8 20%, #fff 35%);
 }
 
 .brand {
